@@ -25,19 +25,19 @@ const Vendors = () => {
   }));
 
   return (
-    <div className="bg-amayaPeach min-h-screen p-8">
-      <h1 className="text-5xl font-bold text-amayaBlue text-center mb-8">Vendors</h1>
+    <div className="bg-amayaPeach dark:bg-gray-800 min-h-screen p-10">
+      <h1 className="text-6xl font-bold text-amayaBlue dark:text-white text-center mb-12 drop-shadow-md">Vendors</h1>
       <div className="max-w-3xl mx-auto">
-        <div className="bg-amayaYellow p-6 rounded-xl mb-6 text-center shadow-md">
-          <p className="text-2xl text-black">Vendor Ads Fund This Site!</p>
-          <p className="text-xl text-black">5 Vendors: ₹60,000/year | 10 Vendors: ₹105,000/year</p>
+        <div className="bg-amayaYellow dark:bg-gray-600 p-6 rounded-xl mb-8 text-center shadow-md">
+          <p className="text-2xl text-black dark:text-white font-semibold">Vendor Ads Fund This Site!</p>
+          <p className="text-xl text-black dark:text-white">5 Vendors: ₹60,000/year | 10 Vendors: ₹105,000/year</p>
         </div>
         <Carousel items={carouselItems} />
         {vendors.map((vendor) => (
-          <div key={vendor._id} className="bg-white p-6 rounded-xl shadow-md mb-4">
-            <p className="text-2xl text-amayaBlue">{vendor.name} ({vendor.service})</p>
-            <p className="text-xl text-black">Contact: {vendor.contact}</p>
-            <p className="text-xl text-black">Type: {vendor.adType} | Clicks: {vendor.clicks}</p>
+          <div key={vendor._id} className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md mb-6 hover:shadow-xl">
+            <p className="text-2xl text-amayaBlue dark:text-white font-semibold">{vendor.name} ({vendor.service})</p>
+            <p className="text-xl text-black dark:text-white">Contact: {vendor.contact}</p>
+            <p className="text-xl text-black dark:text-white">Type: {vendor.adType} | Clicks: {vendor.clicks}</p>
             <Button color="amayaBlue" onClick={() => alert("Simulated click!")}>Call Now</Button>
           </div>
         ))}

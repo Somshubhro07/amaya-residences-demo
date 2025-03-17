@@ -18,19 +18,19 @@ const Notices = () => {
   }, []);
 
   return (
-    <div className="bg-amayaPeach min-h-screen p-8">
-      <h1 className="text-5xl font-bold text-amayaBlue text-center mb-8">Notices</h1>
-      <div className="max-w-3xl mx-auto space-y-6">
+    <div className="bg-amayaPeach dark:bg-gray-800 min-h-screen p-10">
+      <h1 className="text-6xl font-bold text-amayaBlue dark:text-white text-center mb-12 drop-shadow-md">Notices</h1>
+      <div className="max-w-3xl mx-auto space-y-8">
         {notices.map((notice) => (
           <Card
             key={notice._id}
             title={notice.title}
             content={notice.content}
             image="/path-to-puja-image.png"
-            action={<p className="text-xl text-black mt-2">{new Date(notice.date).toLocaleDateString()}</p>}
+            action={<p className="text-xl text-black dark:text-white mt-2">{new Date(notice.date).toLocaleDateString()}</p>}
           />
         ))}
-        <p className="text-xl text-black text-center mt-6">Funded by local ads.</p>
+        <p className="text-xl text-black dark:text-white text-center mt-8">Funded by local ads.</p>
       </div>
     </div>
   );
